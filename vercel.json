@@ -1,0 +1,14 @@
+{
+    "builds": [
+        {
+            "src": "Backend/public/**/*",
+            "use": "@vercel/static"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "/Backend/public/$1"
+        }
+    ]
+}
