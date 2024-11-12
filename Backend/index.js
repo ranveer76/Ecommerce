@@ -13,8 +13,6 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
-app.use(express.static('public/js'));
-app.use(express.static('public/css'));
 
 app.use('/api/', (req, res) => {
     res.json({ message: 'Welcome to the API' });
