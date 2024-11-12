@@ -14,11 +14,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/api/', (req, res) => {
+app.use('/api', (req, res) => {
     res.json({ message: 'Welcome to the API' });
 });
 
-// app.use('*', (req, res) => {
+// app.get('*', (req, res) => {
 //     res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
 // });
 
