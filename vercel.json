@@ -1,5 +1,10 @@
 {
+    "version": 2,
     "builds": [
+        {
+            "src": "Backend/**/*.js",
+            "use": "@vercel/node"
+        },
         {
             "src": "Backend/public/**/*",
             "use": "@vercel/static"
@@ -9,6 +14,10 @@
         {
             "src": "/(.*)",
             "dest": "/Backend/public/$1"
+        },
+        {
+            "src": "/api/(.*)",
+            "dest": "/Backend/$1"
         }
     ]
 }
