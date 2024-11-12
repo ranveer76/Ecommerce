@@ -18,9 +18,16 @@ app.use('/api', (req, res) => {
     res.json({ message: 'Welcome to the API' });
 });
 
-// app.get('*', (req, res) => {
-//     res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
-// });
+app.get('/js', express.static(path.join(__dirname, 'public', 'js')));
+app.get('/css', express.static(path.join(__dirname, 'public', 'css')));
+
+app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
+});
+
+app.use((req, res) => {
+    res.status(404).json({ message: '404 Not Found' });
+});
 
 app.listen(port, () => {
     console.clear();
