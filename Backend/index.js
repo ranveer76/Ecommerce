@@ -18,9 +18,9 @@ app.use('/api/', (req, res) => {
     res.json({ message: 'Welcome to the API' });
 });
 
-app.use('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
-});
+// app.use('*', (req, res) => {
+//     res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
+// });
 
 app.listen(port, () => {
     console.clear();
