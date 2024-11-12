@@ -6,7 +6,7 @@
         "start": "webpack serve --mode development",
         "build": "webpack --mode production",
         "test": "echo \"Error: no test specified\" && exit 1",
-        "deploy": "git add . && git commit -m 'deploy' && git push -u origin main"
+        "deploy": "cd .. && git add . && git commit -m 'deploy' && git push -u origin main"
     },
     "keywords": [],
     "author": "",
